@@ -1,0 +1,54 @@
+/*creates a variable that can be called at any time in the css sheet*/
+:root {
+    --main-color: #ff936c;
+    --main-padding: 15px 5%;
+}
+
+/*targets the entire body*/
+body {
+    background-color: bisque;
+}
+
+/*target 2 elements*/
+header h3 {
+    font-size: 1.3rem;
+    text-decoration: underline;
+    color: var(--main-color);
+    padding: var(--main-padding); /*calling a root var*/
+}
+
+/*two separate stylings for headers */
+main h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--main-color); /*calling a root var*/
+}
+
+
+/*only targets form elements. not its children*/
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 35px auto;
+    padding: var(--main-padding);/*called root var*/
+}
+
+/* asterik targets all items in form*/
+form * {
+    margin: 5px 0;
+    padding: 9px 10px;
+    border-radius: 30px;
+    border: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1rem;
+}
+
+/*this does the same as the code block above 
+form > * {
+    margin: 5px 0;
+    padding: 9px 9px;
+    border-radius: 30px;
+}*/
+
+
